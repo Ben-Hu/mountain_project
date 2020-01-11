@@ -1,0 +1,34 @@
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.4
+
+references:
+  python: &python circleci/python:3.7.5
+
+jobs:
+  check_code:
+    docker:
+      - image: *python
+    steps:
+      - checkout
+      - run:
+          name: Init
+          command: make init
+      - run:
+          name: Format
+          command: make check_format
+      - run:
+          name: Lint
+          command: make lint
+      - run:
+          name: Test
+          command: make coverage
+      - codecov/upload:
+          file: coverage/cover.xml
+
+workflows:
+  version: 2
+  primary:
+    jobs:
+      - check_code
