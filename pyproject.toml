@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mountain_project"
+version = "0.1.0"
+description = "Python MountainProject API Client"
+authors = ["Ben-Hu <benjqh@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Ben-Hu/mountain_project"
+repository = "https://github.com/Ben-Hu/mountain_project"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.22.0"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+flake8 = "^3.7.9"
+mypy = "^0.761"
+pytest = "^5.3.4"
+pytest-cov = "^2.8.1"
+pytest-mock = "^2.0.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
