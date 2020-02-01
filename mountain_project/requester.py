@@ -1,16 +1,28 @@
+from abc import ABC, abstractmethod
 from typing import Any
 
 import requests
 
 
-class Requester(object):
+class Requester(ABC):
+    @abstractmethod
     def __init__(self, access_key: str) -> None:
-        self.__domain = "https://www.mountainproject.com/data"
-        self.__base_params = {"key": access_key}
+        pass
+
+    @abstractmethod
+    def get(self, path: str, params: dict = {}) -> Any:
+        pass
+
+
+class RestRequester(Requester):
+    def __init__(self, access_key: str) -> None:
+        self.__domain: str = "https://www.mountainproject.com/data"
+        self.__access_key: str = access_key
 
     def get(self, path: str, params: dict = {}) -> Any:
         url = f"{self.__domain}{path}"
-        request_params = {**self.__base_params, **params}
+        base_params = {"key": self.__access_key}
+        request_params = {**base_params, **params}
         response = requests.get(url, params=request_params)
         if response.status_code == 200:
             return response.json()

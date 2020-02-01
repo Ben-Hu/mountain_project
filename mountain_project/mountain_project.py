@@ -1,10 +1,13 @@
-from typing import Any, Dict, List
-from .requester import Requester
+from typing import Any, Dict, List, Optional
+from .requester import Requester, RestRequester
 
 
 class MountainProject(object):
-    def __init__(self, access_key: str) -> None:
-        self.__requester = Requester(access_key)
+    def __init__(self, access_key: str, requester: Requester = None) -> None:
+        if requester is None:
+            self.__requester: Requester = RestRequester(access_key)
+        else:
+            self.__requester = requester
 
     def get_user(self, email: str = None, user_id: str = None) -> Dict[str, Any]:
         arg_error = "requires exactly one of email or user_id"

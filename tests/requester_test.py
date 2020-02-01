@@ -4,7 +4,7 @@ from pytest_mock import mocker
 
 import requests
 
-from mountain_project.requester import Requester, RequestException
+from mountain_project.requester import RestRequester, RequestException
 
 
 class MockResponse(object):
@@ -24,33 +24,34 @@ class MockResponse(object):
         return self.__data
 
 
-@pytest.fixture
-def requester():
-    return Requester("access_key")
+class TestRestRequester(object):
+    @pytest.fixture
+    def requester(self):
+        return RestRequester("access_key")
 
+    @pytest.fixture
+    def default_params(self):
+        return {"key": "access_key"}
 
-@pytest.fixture
-def default_params():
-    return {"key": "access_key"}
+    def test_get_success(self, mocker, requester, default_params):
+        mock_response = MockResponse(200, {"foo": "bar"})
+        mocker.patch("requests.get", return_value=mock_response)
 
+        params = {"a": "b"}
+        expected_params = {**default_params, **params}
 
-def test_get_success(mocker, requester, default_params):
-    mock_response = MockResponse(200, {"foo": "bar"})
-    mocker.patch("requests.get", return_value=mock_response)
+        requester.get("/foo/bar", params=params)
 
-    params = {"a": "b"}
-    expected_params = {**default_params, **params}
+        requests.get.assert_called_with(
+            "https://www.mountainproject.com/data/foo/bar", params=expected_params
+        )
 
-    requester.get("/foo/bar", params=params)
-
-    requests.get.assert_called_with(
-        "https://www.mountainproject.com/data/foo/bar", params=expected_params
+    @pytest.mark.parametrize(
+        "mock_response, error_message",
+        [(MockResponse(n, f"{n} message"), f"{n} message") for n in range(201, 599)],
     )
+    def test_get_error(self, mocker, requester, mock_response, error_message):
+        mocker.patch("requests.get", return_value=mock_response)
 
-
-def test_get_error(mocker, requester, default_params):
-    mock_response = MockResponse(503, "503 Bad Gateway")
-    mocker.patch("requests.get", return_value=mock_response)
-
-    with raises(RequestException, match="503: 503 Bad Gateway"):
-        requester.get("/foo/bar")
+        with raises(RequestException, match=error_message):
+            requester.get("/foo/bar")

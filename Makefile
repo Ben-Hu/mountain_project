@@ -24,15 +24,18 @@ mypy:
 
 .PHONY: test
 test:
-	poetry run python -m pytest -v tests
+	poetry run python -m pytest tests
 
 .PHONY: coverage
 coverage:
 	poetry run pytest \
-		--verbose \
 		--cov-report term \
 		--cov-report html:coverage/html \
 		--cov-report xml:coverage/cover.xml \
 		--cov-report annotate:coverage/annotate \
 		--cov=mountain_project \
 		tests
+
+.PHONY: build
+build:
+	poetry build
