@@ -1,8 +1,6 @@
 from mountain_project import MountainProject
-from mountain_project.requester import RestRequester
 
 import pytest
-from pytest_mock import mocker
 from unittest.mock import Mock
 
 

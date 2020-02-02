@@ -1,6 +1,5 @@
 import pytest
 from pytest import raises
-from pytest_mock import mocker
 
 import requests
 
