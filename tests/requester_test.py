@@ -1,6 +1,5 @@
 import pytest
 import requests
-from pytest import raises
 
 from mountain_project.requester import RequestException, RestRequester
 
@@ -51,5 +50,5 @@ class TestRestRequester(object):
     def test_get_error(self, mocker, requester, mock_response, error_message):
         mocker.patch("requests.get", return_value=mock_response)
 
-        with raises(RequestException, match=error_message):
+        with pytest.raises(RequestException, match=error_message):
             requester.get("/foo/bar")

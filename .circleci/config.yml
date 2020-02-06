@@ -42,9 +42,6 @@ jobs:
       - *save_deps_cache_base
       - *save_deps_cache_lockfile
       - run:
-          name: Format
-          command: make check_format
-      - run:
           name: Lint
           command: make lint
       - run:

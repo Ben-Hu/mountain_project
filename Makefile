@@ -32,3 +32,7 @@ coverage:
 .PHONY: build
 build:
 	poetry build
+
+.PHONY: tox
+tox:
+	poetry run tox --parallel all

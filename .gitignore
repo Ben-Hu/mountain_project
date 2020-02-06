@@ -5,4 +5,7 @@ __pycache__/
 coverage/
 dist/
 mountain_project.egg-info/
+.tox/
+.python-version
+
 .vscode/
