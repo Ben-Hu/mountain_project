@@ -1,12 +1,24 @@
-[![CircleCI](https://circleci.com/gh/Ben-Hu/mountain_project.svg?style=svg)](https://circleci.com/gh/Ben-Hu/mountain_project) [![codecov](https://codecov.io/gh/Ben-Hu/mountain_project/branch/master/graph/badge.svg)](https://codecov.io/gh/Ben-Hu/mountain_project) [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Ben-Hu/mountain_project.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ben-Hu/mountain_project/context:python) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) ![License](https://img.shields.io/github/license/Ben-Hu/mountain_project) ![Tag](https://img.shields.io/github/v/tag/Ben-Hu/mountain_project)
+[![CircleCI](https://circleci.com/gh/Ben-Hu/mountain_project.svg?style=svg)](https://circleci.com/gh/Ben-Hu/mountain_project)
+[![codecov](https://codecov.io/gh/Ben-Hu/mountain_project/branch/master/graph/badge.svg)](https://codecov.io/gh/Ben-Hu/mountain_project)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/Ben-Hu/mountain_project.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/Ben-Hu/mountain_project/context:python)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License](https://img.shields.io/github/license/Ben-Hu/mountain_project)](https://github.com/Ben-Hu/mountain_project/blob/master/LICENSE)
+[![Tag](https://img.shields.io/github/v/tag/Ben-Hu/mountain_project)](https://github.com/Ben-Hu/mountain_project/releases)
+[![PyPI](https://img.shields.io/pypi/v/mountain_project?color=blue)](https://pypi.org/project/mountain-project/)
 
 # MountainProject
-Python MountainProject API Client
+A Python API Client for the MountainProject data API
 
 ## Getting Started
 - Sign up for MountainProject @ `https://www.mountainproject.com`
 - Get your access key for the MountainProject data API @ `https://www.mountainproject.com/data`
 
+## Install
+```sh
+pip install mountain_project
+```
+
+## Examples
 ```python
 from mountain_project import MountainProject
 

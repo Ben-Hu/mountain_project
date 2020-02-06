@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Modules &#8212; MountainProject 0.1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="MountainProject" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">MountainProject</a></h1>
+
+
+
+<p class="blurb">A Python API Client for the MountainProject data API</br></br></br></p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modules</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href=""></br></a></li>
+    
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-mountain_project.client">
+<span id="mountain-project-client-module"></span><h2>mountain_project.client module<a class="headerlink" href="#module-mountain_project.client" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mountain_project.client.MountainProject">
+<em class="property">class </em><code class="sig-prename descclassname">mountain_project.client.</code><code class="sig-name descname">MountainProject</code><span class="sig-paren">(</span><em class="sig-param">access_key: str</em>, <em class="sig-param">requester: mountain_project.requester.Requester = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.client.MountainProject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="mountain_project.client.MountainProject.get_routes">
+<code class="sig-name descname">get_routes</code><span class="sig-paren">(</span><em class="sig-param">route_ids: List[str]</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.client.MountainProject.get_routes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.client.MountainProject.get_routes_for_lat_lon">
+<code class="sig-name descname">get_routes_for_lat_lon</code><span class="sig-paren">(</span><em class="sig-param">lat: float</em>, <em class="sig-param">lon: float</em>, <em class="sig-param">max_distance: float = None</em>, <em class="sig-param">max_results: int = None</em>, <em class="sig-param">min_difficulty: str = None</em>, <em class="sig-param">max_difficulty: str = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_routes_for_lat_lon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.client.MountainProject.get_routes_for_lat_lon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.client.MountainProject.get_ticks">
+<code class="sig-name descname">get_ticks</code><span class="sig-paren">(</span><em class="sig-param">email: str = None</em>, <em class="sig-param">user_id: str = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_ticks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.client.MountainProject.get_ticks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.client.MountainProject.get_todos">
+<code class="sig-name descname">get_todos</code><span class="sig-paren">(</span><em class="sig-param">email: str = None</em>, <em class="sig-param">user_id: str = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_todos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.client.MountainProject.get_todos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.client.MountainProject.get_user">
+<code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">email: str = None</em>, <em class="sig-param">user_id: str = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.client.MountainProject.get_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mountain_project.requester">
+<span id="mountain-project-requester-module"></span><h2>mountain_project.requester module<a class="headerlink" href="#module-mountain_project.requester" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="mountain_project.requester.RequestException">
+<em class="property">exception </em><code class="sig-prename descclassname">mountain_project.requester.</code><code class="sig-name descname">RequestException</code><span class="sig-paren">(</span><em class="sig-param">status_code: int</em>, <em class="sig-param">data: str</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mountain_project/requester.html#RequestException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.requester.RequestException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="mountain_project.requester.Requester">
+<em class="property">class </em><code class="sig-prename descclassname">mountain_project.requester.</code><code class="sig-name descname">Requester</code><span class="sig-paren">(</span><em class="sig-param">access_key: str</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mountain_project/requester.html#Requester"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.requester.Requester" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dl class="method">
+<dt id="mountain_project.requester.Requester.get">
+<em class="property">abstract </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">path: str</em>, <em class="sig-param">params: dict = {}</em><span class="sig-paren">)</span> &#x2192; Any<a class="reference internal" href="../_modules/mountain_project/requester.html#Requester.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.requester.Requester.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="mountain_project.requester.RestRequester">
+<em class="property">class </em><code class="sig-prename descclassname">mountain_project.requester.</code><code class="sig-name descname">RestRequester</code><span class="sig-paren">(</span><em class="sig-param">access_key: str</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mountain_project/requester.html#RestRequester"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.requester.RestRequester" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mountain_project.requester.Requester" title="mountain_project.requester.Requester"><code class="xref py py-class docutils literal notranslate"><span class="pre">mountain_project.requester.Requester</span></code></a></p>
+<dl class="method">
+<dt id="mountain_project.requester.RestRequester.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">path: str</em>, <em class="sig-param">params: dict = {}</em><span class="sig-paren">)</span> &#x2192; Any<a class="reference internal" href="../_modules/mountain_project/requester.html#RestRequester.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.requester.RestRequester.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mountain_project">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-mountain_project" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="mountain_project.MountainProject">
+<em class="property">class </em><code class="sig-prename descclassname">mountain_project.</code><code class="sig-name descname">MountainProject</code><span class="sig-paren">(</span><em class="sig-param">access_key: str</em>, <em class="sig-param">requester: mountain_project.requester.Requester = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.MountainProject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="mountain_project.MountainProject.get_routes">
+<code class="sig-name descname">get_routes</code><span class="sig-paren">(</span><em class="sig-param">route_ids: List[str]</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_routes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.MountainProject.get_routes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.MountainProject.get_routes_for_lat_lon">
+<code class="sig-name descname">get_routes_for_lat_lon</code><span class="sig-paren">(</span><em class="sig-param">lat: float</em>, <em class="sig-param">lon: float</em>, <em class="sig-param">max_distance: float = None</em>, <em class="sig-param">max_results: int = None</em>, <em class="sig-param">min_difficulty: str = None</em>, <em class="sig-param">max_difficulty: str = None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_routes_for_lat_lon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.MountainProject.get_routes_for_lat_lon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.MountainProject.get_ticks">
+<code class="sig-name descname">get_ticks</code><span class="sig-paren">(</span><em class="sig-param">email: str = None</em>, <em class="sig-param">user_id: str = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_ticks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.MountainProject.get_ticks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.MountainProject.get_todos">
+<code class="sig-name descname">get_todos</code><span class="sig-paren">(</span><em class="sig-param">email: str = None</em>, <em class="sig-param">user_id: str = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_todos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.MountainProject.get_todos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="mountain_project.MountainProject.get_user">
+<code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">email: str = None</em>, <em class="sig-param">user_id: str = None</em><span class="sig-paren">)</span> &#x2192; Dict[str, Any]<a class="reference internal" href="../_modules/mountain_project/client.html#MountainProject.get_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mountain_project.MountainProject.get_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Ben Hu.
+      
+      |
+      <a href="../_sources/mountain_project/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/Ben-Hu/mountain_project" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>

@@ -7,5 +7,5 @@ dist/
 mountain_project.egg-info/
 .tox/
 .python-version
-
+sphinx/_build/
 .vscode/
