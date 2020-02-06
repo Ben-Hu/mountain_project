@@ -1,5 +1,6 @@
 from typing import Any, Dict, List
-from .requester import Requester, RestRequester
+
+from mountain_project.requester import Requester, RestRequester
 
 
 class MountainProject(object):

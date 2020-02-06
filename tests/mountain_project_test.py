@@ -1,7 +1,8 @@
-from mountain_project import MountainProject
+from unittest.mock import Mock
 
 import pytest
-from unittest.mock import Mock
+
+from mountain_project import MountainProject
 
 
 @pytest.fixture

@@ -1,9 +1,8 @@
 import pytest
+import requests
 from pytest import raises
 
-import requests
-
-from mountain_project.requester import RestRequester, RequestException
+from mountain_project.requester import RequestException, RestRequester
 
 
 class MockResponse(object):

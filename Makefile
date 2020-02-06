@@ -5,22 +5,15 @@ init:
 
 .PHONY: format
 format:
+	poetry run isort --recursive .
 	poetry run black .
 
-.PHONY: check_format
-check_format:
-	poetry run black . --check --diff
-
 .PHONY: lint
-lint: flake8 mypy
-
-.PHONY: flake8
-flake8:
+lint:
 	poetry run flake8 .
-
-.PHONY: mypy
-mypy:
 	poetry run mypy .
+	poetry run isort --recursive --check-only .
+	poetry run black . --check --diff
 
 .PHONY: test
 test:
